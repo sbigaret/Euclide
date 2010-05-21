@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE program_description PUBLIC "-//Telecom Bretagne/DTD XML Praxis Program Description 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/program_description.dtd">
+
+<program_description export_date="2009-04-27 07:35:00" modification_date="2009-04-27 07:35:00">
+  <program provider="vfm" name="PathSimulator" version="1.0" />
+  <from desc_id="S8888" />
+  <description>PathSimulator is...</description>
+  <parameters>
+    <parameter id="path_simulator_cmd" type="command" ismandatory="1">
+      <name>path_simulator_cmd</name>
+      <description></description>
+      <position>1</position>
+      <code>run_PathSimulator.m </code>
+    </parameter>
+
+    <parameter id="OneDimSimulation" ishidden="0" type="output">
+      <name>OneDimSimulation</name>
+      <description>simulated paths</description>
+      <position>3</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="SimParameters" ishidden="0" type="input">
+      <name>SimParameters </name>
+      <description>Simulation parameters </description>
+      <position>2</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef>simulation-parameters.xml</vdef>
+      <dep/>
+    </parameter>
+
+  </parameters>
+</program_description>
+

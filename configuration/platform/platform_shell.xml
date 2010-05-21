@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE platform PUBLIC "-//Telecom Bretagne/DTD XML Praxis Platform 1.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/platform.dtd">
+<platform type="shell">
+  <configuration>
+    <item name="script-init"><![CDATA[echo 'starting shell execution ...'
+setenv EUCLIDE_PATH /home/phn/dev/Euclide
+setenv PATH ${EUCLIDE_PATH}/src:${PATH}
+setenv PYTHONPATH ${PYTHONPATH}:${EUCLIDE_PATH}/python/
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${EUCLIDE_PATH}/octave/xmltoolbox
+echo 'after export ...'
+echo $EUCLIDE_PATH
+]]>
+</item>
+  </configuration>
+
+<programs>
+    <program id="vfm___SimParameters___1.0"/>
+    <program id="vfm___LogNormalDynamic___1.0"/>
+    <program id="vfm___UnknownVolDynamic___1.0"/>
+    <program id="vfm___GabillonDynamic___1.0"/>
+    <program id="vfm___PathSimulator___1.0"/>
+    <program id="vfm___AssetDefinition___1.0"/>
+    <program id="vfm___HedgingParameters___1.0"/>
+    <program id="vfm___AssetCalculator___1.0"/>
+    <program id="vfm___AssetCalculatorPremia___1.0"/>
+    <program id="vfm___AssetCalculatorRMetrics___1.0"/>
+    <program id="vfm___DeltaHedgingSimulator___1.0"/>
+    <program id="vfm___Stats___1.0"/>
+    <program id="vfm___HedgeComparator___1.0"/>
+        
+</programs>
+</platform>

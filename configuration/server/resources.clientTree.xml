@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE resourcesTree [
+	<!ELEMENT resourcesTree (type)+>
+	<!ELEMENT type (type|resource)*>
+	<!ELEMENT resource (#PCDATA)>
+	<!ATTLIST type
+	  name         CDATA    #REQUIRED
+      icon         CDATA    #IMPLIED
+      collapsed    CDATA    #IMPLIED
+      experimental (yes|no) "no"
+    >
+	<!ATTLIST resourcesTree
+    	version CDATA #REQUIRED
+    >
+	<!ATTLIST resource
+    	name CDATA #REQUIRED
+        icon CDATA #IMPLIED
+    >
+]>
+<resourcesTree version="1" >
+	<type name="vfm">
+	    <resource name="vfm___SimParameters___1.0"/>
+	    <resource name="vfm___LogNormalDynamic___1.0"/>
+	    <resource name="vfm___UnknownVolDynamic___1.0"/>
+	    <resource name="vfm___GabillonDynamic___1.0"/>
+        <resource name="vfm___PathSimulator___1.0"/>
+        <resource name="vfm___AssetDefinition___1.0"/>
+        <resource name="vfm___HedgingParameters___1.0"/>
+        <resource name="vfm___AssetCalculator___1.0"/>
+        <resource name="vfm___AssetCalculatorPremia___1.0"/>
+        <resource name="vfm___AssetCalculatorRMetrics___1.0"/>
+        <resource name="vfm___DeltaHedgingSimulator___1.0"/>
+        <resource name="vfm___Stats___1.0"/>	
+        <resource name="vfm___HedgeComparator___1.0"/>	
+	</type>
+</resourcesTree>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE program_description PUBLIC "-//Telecom Bretagne/DTD XML Praxis Program Description 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/program_description.dtd">
+
+<program_description export_date="2009-04-27 07:35:00" modification_date="2009-04-27 07:35:00">
+  <program provider="vfm" name="AssetDefinition" version="1.0" />
+  <from desc_id="S8888" />
+  <description>Instrument is...</description>
+
+  <parameters>
+    <parameter id="instrument" type="command" ismandatory="1">
+      <name>Instrument</name>
+      <description></description>
+      <position>1</position>
+      <code>set_assetDefinition.py </code>
+    </parameter>
+
+    <parameter id="Asset" ishidden="0" type="output">
+      <name>Asset</name>
+      <description>Asset description</description>
+      <position>301</position>
+      <code>--file %s %n</code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="class" ishidden="0" type="enum">
+      <name>Instrument class</name>
+      <description>Instrument class description</description>
+      <position>101</position>
+      <vlist>
+        <item id="Vanilla">
+          <description>Vanilla</description>
+          <code>--class vanilla </code>
+        </item>
+      </vlist>
+      <vdef>Vanilla</vdef>
+    </parameter>
+
+    <parameter id="exerciseType" ishidden="0" type="enum">
+      <name>Exercise type</name>
+      <description>exerciseType description</description>
+      <position>102</position>
+      <vlist>
+        <item id="C">
+          <description>C</description>
+          <code>--payoff C </code>
+        </item>
+        <item id="DC">
+          <description>DC</description>
+          <code>--payoff DC </code>
+        </item>
+      </vlist>
+      <vdef>C</vdef>
+    </parameter>
+
+    <parameter id="strike" ishidden="0" type="int">
+      <name>Strike </name>
+      <description>strike description </description>
+      <position>103</position>
+      <code>--strike %s </code>
+      <constraint>
+        <description>value should be a non-null positive integer</description>
+        <code>(%d &gt; 0)</code>
+      </constraint>
+      <vdef>100</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="maturity" ishidden="0" type="int">
+      <name>Maturity </name>
+      <description>Maturity (in year) </description>
+      <position>104</position>
+      <code>--maturity %s </code>
+      <constraint>
+        <description>value should be a non-null positive integer</description>
+        <code>(%d &gt; 0)</code>
+      </constraint>
+      <vdef>1</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="quantity" ishidden="0" type="float">
+      <name>Quantity </name>
+      <description>Quantity </description>
+      <position>105</position>
+      <code>--quantity %s </code>
+      <vdef>1</vdef>
+      <dep/>
+    </parameter>
+
+  </parameters>
+</program_description>
+

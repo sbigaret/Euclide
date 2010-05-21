@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE program_description PUBLIC "-//Telecom Bretagne/DTD XML Praxis Program Description 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/program_description.dtd">
+
+<program_description export_date="2009-04-27 07:35:00" modification_date="2009-04-27 07:35:00">
+  <program provider="vfm" name="HedgeComparator" version="1.0" />
+  <from desc_id="S8888" />
+  <description>Statistics on delta hedging strategies</description>
+  <parameters>
+    <parameter id="hedge_comparator_cmd" type="command" ismandatory="1">
+      <name>hedge_comparator_cmd</name>
+      <description></description>
+      <position>1</position>
+      <code>run_hedge_comparator.m </code>
+    </parameter>
+
+    <parameter id="Asset" ishidden="0" type="input">
+      <name>Asset </name>
+      <description>Asset definition </description>
+      <position>2</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="DeltaHedgingStats-1" ishidden="0" type="input">
+      <name>DeltaHedgingStats-1</name>
+      <description>Delta hedging results</description>
+      <position>3</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="DeltaHedgingStats-2" ishidden="0" type="input">
+      <name>DeltaHedgingStats-2</name>
+      <description>Delta hedging results</description>
+      <position>4</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="hedgeDiffPlot" ishidden="0" type="output">
+      <name>wealthPlot (jpg)</name>
+      <description>hedgediffplot description</description>
+      <position>302</position>
+      <code/>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef>hedgediffplot.jpg</vdef>
+      <dep/>
+    </parameter>
+
+
+  </parameters>
+</program_description>
+

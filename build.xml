@@ -1,0 +1,104 @@
+<project name="Euclide" default="build_standalone_jar" basedir=".">
+  <description>
+    Euclide' build.xml
+  </description>
+
+  <property name="project.name" value="Euclide"/>
+  <!--
+       Uncomment the next line and modify it to point to the praxis-install
+       directory
+    -->
+  <!--
+  <property name="praxis.home"
+            value="/path/to/praxis-install" />
+  -->
+
+  <!-- check that praxis.home is correctly set -->
+  <fail unless="praxis.home"
+        message="praxis.home is not set: please edit build.xml and set it"/>
+  <available file="${praxis.home}" type="dir"
+             property="praxis.home.exists"/>
+  <fail unless="praxis.home.exists"
+        message="${praxis.home} does not exist: please edit build.xml and set it"/>
+  <!-- -->
+
+  <import file="${praxis.home}/praxis-core/build.xml" />
+
+  <property name="source.dir" location="src"/>
+  <property name="bin.dir" location="bin"/>
+  <property name="build.dir" location="build"/>
+
+  <path id="euclide.libs">
+    <fileset dir="." id="euclide.libs.fileset">
+      <include name="**/*.jar" />
+      <exclude name="build/**"/>
+    </fileset>
+  </path>
+
+  <echo-path pathref="euclide.libs"/>
+  <echo-path pathref="praxis.all.libs"/>
+
+  <!-- init + compile -->
+  <target name="init" unless="init_ok">		
+    <property name="init_ok" value="ok"/>
+    <tstamp/>
+    <mkdir dir="${bin.dir}"/>
+    <mkdir dir="${build.dir}"/>
+  </target>
+  
+  <target name="compile" depends="init, praxis.core.compile, praxis.swing_gui.compile"
+          description="Compile all sources">
+    <javac destdir="${bin.dir}"
+           debug="off"
+           source="1.6"
+           target="1.6"
+           encoding="UTF-8"
+           excludes="**/*Test*">
+      <classpath path="${praxis.core.bin}"/>
+      <classpath path="${praxis.swing_gui.bin}"/>
+      <classpath refid="euclide.libs"/>
+      <classpath refid="praxis.all.libs"/>
+      <src path="${source.dir}"/>
+    </javac>
+  </target>
+
+  <target name="build_project_jar" depends="compile">
+    <jar jarfile="${build.dir}/${project.name}.jar" index="true">
+      <fileset dir="${bin.dir}">
+        <exclude name="**/*Test*"/>
+      </fileset>
+    </jar>
+  </target>
+  
+  <target name="xml_to_java"
+      description="Transforms xml descriptions to java">
+    <praxis_generate_java
+       configuration="configuration/run_cfg/java_generation.cfg"
+       descriptions="configuration/descriptions"
+       target.src="src"
+       />
+  </target>
+
+  <target name="build_standalone_jar"
+		    depends="build_project_jar"
+		    description="Builds the standalone jar">
+    <copy file="configuration/server/resources.clientTree.xml"
+          tofile="configuration/client/resources.clientTree.xml"
+          preservelastmodified="true"/>
+    <praxis_project_one_jar
+       project.name="${project.name}"
+       configuration="configuration/run_cfg/standalone.cfg"
+       destfile="${build.dir}/${project.name}-full.jar">
+      <libs>
+        <fileset file="${build.dir}/${project.name}.jar"/>
+<!--    <fileset file="configuration/client/lib/*.jar"/> -->
+        <fileset refid="euclide.libs.fileset" />
+      </libs>
+      <includes>
+        <fileset dir="." includes="configuration/**" excludes="**/*~" />
+      </includes>
+    </praxis_project_one_jar>
+
+  </target>
+
+</project>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE program_description PUBLIC "-//Telecom Bretagne/DTD XML Praxis Program Description 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/program_description.dtd">
+
+<program_description export_date="2009-04-27 07:35:00" modification_date="2009-04-27 07:35:00">
+  <program provider="vfm" name="AssetCalculator" version="1.0" />
+  <from desc_id="S8888" />
+  <description>Calculator of Price and Delta for asset</description>
+  <parameters>
+    <parameter id="calculate_asset_cmd" type="command" ismandatory="1">
+      <name>calculate_asset_cmd</name>
+      <description></description>
+      <position>1</position>
+      <code>calculate_asset.m </code>
+    </parameter>
+
+    <parameter id="Asset" ishidden="0" type="input">
+      <name>Asset </name>
+      <description>Asset definition </description>
+      <position>2</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="OneDimSimulation" ishidden="0" type="input">
+      <name>OneDimSimulation</name>
+      <description>simulated paths</description>
+      <position>3</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="HedgingParameters" ishidden="0" type="input">
+      <name>HedgingParameters</name>
+      <description>Hedging Parameters</description>
+      <position>4</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="AssetPriceDelta" ishidden="0" type="output">
+      <name>AssetPriceDelta</name>
+      <description>Price and delta of asset</description>
+      <position>301</position>
+      <code> %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+  </parameters>
+</program_description>
+

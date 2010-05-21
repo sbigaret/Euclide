@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE external_viewers PUBLIC "-//Telecom Bretagne/DTD XML Praxis External Viewers 1.0//EN" "http://public.enst-bretagne.fr/~bigaret/praxis/dtd/external_viewers.dtd">
+<external_viewers>
+
+    <viewer>
+	    <name>gedit</name>
+	    <type>local</type>
+	    <path>gedit</path>
+	    <formats>
+	        <format>defaut</format>
+	        <format>tree</format>
+	    </formats>
+	    <parameters></parameters>
+    </viewer>
+
+    <viewer>
+	    <name>notepad</name>
+	    <type>local</type>
+	    <path>notepad</path>
+	    <formats>
+	        <format>defaut</format>
+	        <format>tree</format>
+	    </formats>
+	    <parameters></parameters>
+    </viewer>
+
+    <viewer>
+      <name>ghostview</name>
+      <type>local</type>
+      <path>gv</path>
+      <formats>
+        <format>postscript</format>
+      </formats>
+      <parameters></parameters>
+    </viewer>
+
+    <viewer>
+        <name>eog</name>
+        <type>local</type>
+        <path>eog</path>
+        <formats>
+            <format>jpg</format>
+            <format>defaut</format>
+        </formats>
+        <parameters></parameters>
+    </viewer>
+
+
+</external_viewers>

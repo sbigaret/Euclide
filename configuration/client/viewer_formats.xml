@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formats [
+          <!ELEMENT formats   (format)*>
+          <!ELEMENT format    (name,header,extension)>
+          <!ELEMENT name      (#PCDATA)>
+          <!ELEMENT header    (#PCDATA)>
+          <!ELEMENT extension (#PCDATA)>
+          ]>
+<formats>
+    <format>
+        <name>tree</name>
+        <header>(</header>
+        <extension>.tree</extension>
+    </format>
+    <format>
+        <name>defaut</name>
+        <header></header>
+        <extension></extension>
+    </format>
+    <format>
+        <name>txt</name>
+        <header></header>
+        <extension>.txt</extension>
+    </format>
+    <format>
+        <name>jpg</name>
+        <header></header>
+        <extension>.jpg</extension>
+    </format>
+    <format>
+        <name>postscript</name>
+        <header>%!PS-Adobe-2.0</header>
+        <extension>.ps</extension>
+    </format>
+</formats>	

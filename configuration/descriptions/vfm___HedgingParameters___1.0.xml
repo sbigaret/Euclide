@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE program_description PUBLIC "-//Telecom Bretagne/DTD XML Praxis Program Description 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/program_description.dtd">
+
+<program_description export_date="2009-04-27 07:35:00" modification_date="2009-04-27 07:35:00">
+  <program provider="vfm" name="HedgingParameters" version="1.0" />
+  <from desc_id="S8888" />
+  <description>Define Simulation Parameters</description>
+  <parameters>
+    <parameter id="hedging_parameters_cmd" type="command" ismandatory="1">
+      <name>hedgin_parameters_cmd</name>
+      <description></description>
+      <position>1</position>
+      <code>set_tradingParameters.py </code>
+    </parameter>
+
+    <parameter id="HedgingVol" ishidden="0" type="float">
+      <name>HedgingVol </name>
+      <description>Hedging Volatility </description>
+      <position>2</position>
+      <code>--hedgingVol %s </code>
+      <vdef>.3</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="DiscountRate" ishidden="0" type="float">
+      <name>DiscountRate </name>
+      <description>Discount Rate </description>
+      <position>3</position>
+      <code>--discountRate %s </code>
+      <vdef>.02</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="HedgingParameters" ishidden="0" type="output">
+      <name>HedgingParameters</name>
+      <description>Hedging Parameters</description>
+      <position>200</position>
+      <code>--file %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+  </parameters>
+</program_description>
+

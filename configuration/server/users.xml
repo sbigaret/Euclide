@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE users [
+  <!ELEMENT users   (user)>
+  <!ELEMENT user    (login,pass)>
+  <!ELEMENT login   (#PCDATA)>
+  <!ELEMENT pass    (#PCDATA)>
+]>
+<users>
+	<user>
+		<login>praxis</login>
+		<pass>praxis</pass>
+	</user>
+</users>
+

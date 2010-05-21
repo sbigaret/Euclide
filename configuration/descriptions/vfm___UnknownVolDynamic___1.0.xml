@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE program_description PUBLIC "-//Telecom Bretagne/DTD XML Praxis Program Description 3.0//EN" "http://perso.telecom-bretagne.eu/~bigaret/praxis/dtd/program_description.dtd">
+
+<program_description export_date="2009-04-27 07:35:00" modification_date="2009-04-27 07:35:00">
+  <program provider="vfm" name="UnknownVolDynamic" version="1.0" />
+  <from desc_id="S8888" />
+  <description>Defines simulation parameters for a unknown vol lognormal dynamic</description>
+  <parameters>
+    <parameter id="unknown_vol_dynamic_cmd" type="command" ismandatory="1">
+      <name>unknown_vol_dynamic_cmd</name>
+      <description></description>
+      <position>1</position>
+      <code>echo $PYTHONPATH %n echo 'calling python...'%n set_simulationParameters.py --diffusion UNKNOWNVOL </code>
+    </parameter>
+
+    <parameter id="SimParameters" ishidden="0" type="output">
+      <name>SimParameters</name>
+      <description>Simulation Parameters</description>
+      <position>200</position>
+      <code>--file %s </code>
+      <types>
+        <type>other</type>
+      </types>
+      <vdef></vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="Horizon" ishidden="0" type="int">
+      <name>Horizon </name>
+      <description>Simulation Horizon </description>
+      <position>1</position>
+      <code>--horizon %s </code>
+      <constraint>
+        <description>value should be a non-null positive integer</description>
+        <code>(%d &gt; 0)</code>
+      </constraint>
+      <vdef>1</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="nbSteps" ishidden="0" type="int">
+      <name>Number of steps?</name>
+      <description>nbsteps description</description>
+      <position>2</position>
+      <code>--nbSteps %s </code>
+      <constraint>
+        <description>value should be a non-null positive integer</description>
+        <code>(%d &gt; 0)</code>
+      </constraint>
+      <vdef>100</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="nbPaths" ishidden="0" type="int">
+      <name>nb paths?</name>
+      <description>nbpaths description</description>
+      <position>3</position>
+      <code>--nbPaths %s </code>
+      <constraint>
+        <description>value should be a non-null positive integer</description>
+        <code>(%d &gt; 0)</code>
+      </constraint>
+      <vdef>100</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="S0" ishidden="0" type="float">
+      <name>InitValue</name>
+      <description>Initial value</description>
+      <position>4</position>
+      <code>--S0 %s </code>
+      <vdef>100</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="mu" ishidden="0" type="float">
+      <name>drift</name>
+      <description>drift</description>
+      <position>5</position>
+      <code>--mu %s </code>
+      <vdef>0.0</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="sigmaMin" ishidden="0" type="float">
+      <name>sigmaMin</name>
+      <description>Min volatility</description>
+      <position>6</position>
+      <code>--sigmaMin %s </code>
+      <vdef>0.20</vdef>
+      <dep/>
+    </parameter>
+
+    <parameter id="sigmaMax" ishidden="0" type="float">
+      <name>sigmaMax</name>
+      <description>Max volatility</description>
+      <position>7</position>
+      <code>--sigmaMax %s </code>
+      <vdef>0.40</vdef>
+      <dep/>
+    </parameter>
+    
+  </parameters>
+</program_description>
+
