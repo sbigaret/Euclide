@@ -12,6 +12,8 @@
   <property name="praxis.home"
             value="/path/to/praxis-install" />
   -->
+  <property name="praxis.home"
+            value="/home/big/Projets/praxis-git/praxis-install" />
 
   <!-- check that praxis.home is correctly set -->
   <fail unless="praxis.home"
@@ -96,6 +98,7 @@
       </libs>
       <includes>
         <fileset dir="." includes="configuration/**" excludes="**/*~" />
+        <fileset dir="." includes="images/**" excludes="**/*~" />
       </includes>
     </praxis_project_one_jar>
 
