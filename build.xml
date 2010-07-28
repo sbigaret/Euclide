@@ -8,10 +8,8 @@
        Uncomment the next line and modify it to point to the praxis-install
        directory
     -->
-  <!--
   <property name="praxis.home"
-            value="/path/to/praxis-install" />
-  -->
+            value="/home/phn/Software/praxis-install"/>
 
   <!-- check that praxis.home is correctly set -->
   <fail unless="praxis.home"
