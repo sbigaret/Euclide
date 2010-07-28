@@ -94,6 +94,7 @@
       </libs>
       <includes>
         <fileset dir="." includes="configuration/**" excludes="**/*~" />
+        <fileset dir="." includes="images/**" excludes="**/*~" />
       </includes>
     </praxis_project_one_jar>
 
