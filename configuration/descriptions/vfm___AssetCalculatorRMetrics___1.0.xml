@@ -10,7 +10,7 @@
       <name>R</name>
       <description></description>
       <position>1</position>
-      <code>R --slave --vanilla --args </code>
+      <code>/usr/bin/R --slave --vanilla --args </code>
     </parameter>
 
     <parameter id="Asset" ishidden="0" type="input">
@@ -53,7 +53,7 @@
       <name>AssetPriceDelta</name>
       <description>Price and delta of asset</description>
       <position>301</position>
-      <code> %s &lt; ${EUCLIDE_PATH}/src/calculate_asset.R</code>
+      <code> %s &lt; ${EUCLIDE_PATH}/src/R/calculate_asset.R</code>
       <types>
         <type>other</type>
       </types>

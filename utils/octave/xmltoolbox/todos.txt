@@ -1,0 +1,18 @@
+Type-safe XML
+  - support of char/complex matrices of dimension > 3
+  - load/save of struct matrix
+  - load/save of char matrix
+  - load/save of complex matrix
+  - load/save sparse matrix
+  - octave.xsd is assumed to exist in the current path
+  
+Generic XML  
+  - r/w of CDATA
+  - deal with non-ansi chars 
+  - allow multiple text areas within an element 
+  - improve creation of a generic XML from scratch (util methods?)
+  - make it simpler (just create maps on the fly, without elementinfo)
+ 
+General
+  - improve performance (although its even faster than GEODISE)
+  - testing

@@ -1,0 +1,105 @@
+<!-- octave.xsd - Thomas Geiger, 2006/02/21 -->
+<!-- Schema to validate octave XML documents
+     following the file matlab.xsd of the Geodise Project -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="root"/>
+
+	<xs:element name="struct">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="struct"/>
+                <xs:element ref="cell"/>
+                <xs:element ref="double"/>
+                <xs:element ref="char"/>
+                <xs:element ref="complex"/>
+            </xs:choice>
+            <xs:attributeGroup ref="structAttrs"/>
+        </xs:complexType>
+    </xs:element>
+
+	 <xs:element name="cell">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="struct"/>
+                <xs:element ref="cell"/>
+                <xs:element ref="double"/>
+                <xs:element ref="char"/>
+                <xs:element ref="complex"/>
+            </xs:choice>
+            <xs:attributeGroup ref="attrs"/>
+        </xs:complexType>
+    </xs:element>
+
+	 <xs:element name="double">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="doubleList">
+                    <xs:attributeGroup ref="attrs"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+	<xs:element name="char">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attributeGroup ref="attrs"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+	<xs:element name="complex">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="double" minOccurs="2" maxOccurs="2">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="nonEmptyDoubleList">
+                                <xs:attributeGroup ref="attrs"/>
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attributeGroup ref="attrs"/>
+        </xs:complexType>
+    </xs:element>
+
+	<xs:attributeGroup name="attrs">
+        <xs:attribute name="idx" type="xs:integer" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="optional"/>
+        <xs:attribute name="size" type="intList" use="optional" default="1 1"/>
+    </xs:attributeGroup>
+
+    <!-- structAttributes is a list of attributes that all struct elements have -->
+    <xs:attributeGroup name="structAttrs">
+        <xs:attributeGroup ref="attrs"/>
+        <!-- Include all the attributes in commonAttributes -->
+    </xs:attributeGroup>
+
+    <!-- represents a double list -->
+    <xs:simpleType name="doubleList">
+        <xs:list itemType="xs:double"/>
+    </xs:simpleType>
+
+    <!-- represents a double list with at least one element -->
+    <xs:simpleType name="nonEmptyDoubleList">
+        <xs:restriction base="doubleList">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- represents an integer list -->
+    <xs:simpleType name="intList">
+        <xs:list itemType="xs:int"/>
+    </xs:simpleType>
+
+    <!-- represents a string list -->
+    <xs:simpleType name="stringList">
+        <xs:list itemType="xs:string"/>
+    </xs:simpleType>
+
+</xs:schema>

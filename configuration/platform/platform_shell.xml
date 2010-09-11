@@ -4,9 +4,9 @@
   <configuration>
     <item name="script-init"><![CDATA[echo 'starting shell execution ...'
 setenv EUCLIDE_PATH /home/phn/dev/Euclide
-setenv PATH ${EUCLIDE_PATH}/src:${PATH}
-setenv PYTHONPATH ${PYTHONPATH}:${EUCLIDE_PATH}/python/
-setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${EUCLIDE_PATH}/octave/xmltoolbox
+setenv PATH ${EUCLIDE_PATH}/src/octave:${EUCLIDE_PATH}/src/R:${EUCLIDE_PATH}/src/python:{PATH}
+setenv PYTHONPATH ${PYTHONPATH}:${EUCLIDE_PATH}/utils/python/
+setenv LD_LIBRARY_PATH ${LD_LIBRARY_PATH}:${EUCLIDE_PATH}/utils/octave/xmltoolbox
 echo 'after export ...'
 echo $EUCLIDE_PATH
 ]]>

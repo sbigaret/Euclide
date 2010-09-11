@@ -1,0 +1,16 @@
+<book>
+<title>My First XML</title>
+<prod id="33-657" media="paper"></prod>
+
+<chapter>Introduction to XML
+<para>What is HTML</para>
+<para>What is XML</para>
+</chapter>
+
+<chapter>XML Syntax
+<para>Elements must have a closing tag</para>
+<para>Elements must be properly nested</para>
+</chapter>
+<special id="1" />
+</book>
+

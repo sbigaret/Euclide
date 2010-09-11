@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root idx="1" type="struct" size="1 1">
+  <a idx="1" type="char" size="1 3">foo</a>
+  <b idx="1" type="double" size="1 1">3.1415</b>
+  <d idx="1" type="cell" size="1 3">
+    <item idx="1" type="char" size="1 3">bar</item>
+    <item idx="2" type="char" size="1 3">baz</item>
+    <item idx="3" type="char" size="1 4">bazz</item>
+  </d>
+  <g idx="1" type="struct" size="1 1">
+    <a idx="1" type="cell" size="1 1">
+      <item idx="1" type="char" size="1 4">g1a1</item>
+    </a>
+  </g>
+  <h idx="1" type="complex" size="1 1">
+    <item idx="1" type="double" size="1 1">4</item>
+    <item idx="2" type="double" size="1 1">3</item>
+  </h>
+  <x idx="1" type="double" size="2 4">1 5 2 6 3 7 4 8 </x>
+</root>
+

@@ -1,0 +1,66 @@
+
+2007/08/17:
+	- source documentation
+	- 0.4.9 version
+
+2007/07/21:
+	- enable switch of validation mode in OctaveXMLReader
+
+2007/07/20:
+	- install octave.xsd to /usr/include/octavexml by default
+	- TypesafeXMLHandler: assume octave.xsd to be in /usr/include/octavexml
+	- OctaveHandler: print error/fatalError msgs, count errors and return safely 
+	- 0.4.8 release
+
+2007/07/18:
+    - improve testscript
+    - fix bug in xml_parse ('<' vs. '>' confusion) 
+
+2007/07/16:
+	- eliminate compile warnings
+	- GenericXMLWriter: throw error when NAME attr is empty
+	- GenericXMLWriter: provide fallback when no ORDER attr is defined
+	- 0.4.7 release
+
+2007/07/15:
+	- always specify format explicitly as Reader/Writer will stays in memory 
+	  once being loaded
+
+2007/07/10:
+	- fix crash when no arg is provided (xml_save/xml_load/xml_format)
+
+2007/07/04:
+	- xml_help
+	- move parse/format code to save/load and have links
+	- bump to 0.4.7
+
+2007/06/30:
+	- load/save using typesafe format by default
+
+2007/06/26:
+	- typesafe: more compatibility tests on geodise format
+	- typesafe: several fixes to be compatible to geodise format
+	- typesafe: better error reporting for not supported types at import time 
+
+2007/06/25:
+	- anyxml: read/write namespaces
+	- anyxml: read/write comments
+
+2007/06/21:
+	- more generic headers
+
+2007/06/20:
+	- output precision for double 
+	- store double using scientific format
+	- release 0.4.5
+	
+2007/06/15:
+	- use dim_vec for storing dimensions
+	- d-dim support: use double NDArray
+
+2007/06/13:
+	- directly parse from file
+	- parse from istream
+	- avoid crash when handling parser errors
+	- refactor: encapsulate functionality in OctaveXMLReader/OctaveXMLWriter
+	- performance improvements (benchmark with valgrind)

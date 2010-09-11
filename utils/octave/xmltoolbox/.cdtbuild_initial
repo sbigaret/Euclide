@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 3.1.0?>
+
+<ManagedProjectBuildInfo>
+<project id="sample_oct.cdt.managedbuild.target.gnu.exe.1598191979" name="Executable (Gnu)" projectType="cdt.managedbuild.target.gnu.exe">
+<configuration artifactExtension="" artifactName="" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.config.gnu.exe.debug.27355814" name="Debug" parent="cdt.managedbuild.config.gnu.exe.debug" postbuildStep="">
+<toolChain id="cdt.managedbuild.toolchain.gnu.exe.debug.298955939" name="GCC Tool Chain" superClass="cdt.managedbuild.toolchain.gnu.exe.debug">
+<builder arguments="" command="mkoctfile" id="cdt.managedbuild.target.gnu.builder.exe.debug.1706242733" name="Gnu Make.Debug" superClass="cdt.managedbuild.target.gnu.builder.exe.debug"/>
+<tool command="g++" id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.368628890" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug">
+<option id="gnu.cpp.compiler.option.include.paths.2118939305" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/octave2_9_9}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/octave2_9_9/liboctave}&quot;"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/xerces2_7_0}&quot;"/>
+</option>
+<option id="gnu.cpp.compiler.option.preprocessor.def.1198967" superClass="gnu.cpp.compiler.option.preprocessor.def" valueType="definedSymbols">
+<listOptionValue builtIn="false" value="DEFUN_DLD"/>
+</option>
+<option id="gnu.cpp.compiler.option.preprocessor.undef.1691257546" superClass="gnu.cpp.compiler.option.preprocessor.undef"/>
+</tool>
+<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1156923010" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.debug">
+<option id="gnu.c.compiler.option.include.paths.735953035" superClass="gnu.c.compiler.option.include.paths"/>
+</tool>
+<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.debug.2100026646" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.debug"/>
+<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug.1330414694" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.debug">
+<option id="gnu.cpp.link.option.libs.1838150240" superClass="gnu.cpp.link.option.libs" valueType="libs">
+<listOptionValue builtIn="false" value="octave"/>
+<listOptionValue builtIn="false" value="/usr/lib/octave-2.1.73"/>
+<listOptionValue builtIn="false" value="xerces-c"/>
+</option>
+<option id="gnu.cpp.link.option.paths.1871941747" superClass="gnu.cpp.link.option.paths" valueType="stringList">
+<listOptionValue builtIn="false" value="/usr/lib"/>
+</option>
+<option id="gnu.cpp.link.option.defname.935025720" superClass="gnu.cpp.link.option.defname" value="" valueType="string"/>
+<option id="gnu.cpp.link.option.shared.1444223341" superClass="gnu.cpp.link.option.shared" value="true" valueType="boolean"/>
+<option id="gnu.cpp.link.option.soname.779590807" superClass="gnu.cpp.link.option.soname" value="" valueType="string"/>
+</tool>
+<tool id="cdt.managedbuild.tool.gnu.assembler.exe.debug.536342747" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.debug"/>
+<macros expandEnvironmentMacros="true"/>
+</toolChain>
+</configuration>
+<configuration artifactName="sample_oct" cleanCommand="rm -rf" description="" errorParsers="org.eclipse.cdt.core.MakeErrorParser;org.eclipse.cdt.core.GCCErrorParser;org.eclipse.cdt.core.GLDErrorParser;org.eclipse.cdt.core.GASErrorParser" id="cdt.managedbuild.config.gnu.exe.release.1477315550" name="Release" parent="cdt.managedbuild.config.gnu.exe.release">
+<toolChain id="cdt.managedbuild.toolchain.gnu.exe.release.1790444049" name="GCC Tool Chain" superClass="cdt.managedbuild.toolchain.gnu.exe.release">
+<tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.785765117" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release"/>
+<tool id="cdt.managedbuild.tool.gnu.c.compiler.exe.release.1750008407" name="GCC C Compiler" superClass="cdt.managedbuild.tool.gnu.c.compiler.exe.release"/>
+<tool id="cdt.managedbuild.tool.gnu.c.linker.exe.release.1431436537" name="GCC C Linker" superClass="cdt.managedbuild.tool.gnu.c.linker.exe.release"/>
+<tool id="cdt.managedbuild.tool.gnu.cpp.linker.exe.release.1199429649" name="GCC C++ Linker" superClass="cdt.managedbuild.tool.gnu.cpp.linker.exe.release"/>
+<tool id="cdt.managedbuild.tool.gnu.assembler.exe.release.1159932473" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.exe.release"/>
+</toolChain>
+</configuration>
+<macros/>
+</project>
+</ManagedProjectBuildInfo>

@@ -1,0 +1,10 @@
+p.NAME = "person";
+p.COMMENTS{1} = "person entry";
+p.ATTRS.id = "37";
+p.name{1}.NAME = "name";
+p.name{1}.TEXT = "Donald Ervin Knuth";
+p.yearofbirth{1}.NAME = "yearofbirth";
+p.yearofbirth{1}.TEXT = "1938";
+p.yearofbirth{1}.ORDER = 999;
+p.website{1}.NAME = "website";
+p.website{1}.TEXT = "http://www-cs-faculty.standford.edu/knuth/";

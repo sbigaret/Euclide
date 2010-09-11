@@ -1,0 +1,9 @@
+#Mon Jun 18 10:11:04 CEST 2007
+eclipse.preferences.version=1
+indexer/filesToParseUpFront=
+indexer/indexAllFiles=false
+indexer/indexerId=org.eclipse.cdt.core.nullindexer
+indexer/skipReferences=false
+indexer/skipTypeReferences=false
+indexerId=org.eclipse.cdt.core.fastIndexer
+instance/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
