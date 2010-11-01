@@ -22,7 +22,7 @@
       <types>
         <type>other</type>
       </types>
-      <vdef></vdef>
+      <vdef>asset.xml</vdef>
       <dep/>
     </parameter>
 

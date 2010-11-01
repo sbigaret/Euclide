@@ -21,7 +21,7 @@
       <types>
         <type>other</type>
       </types>
-      <vdef></vdef>
+      <vdef>sim_parameters.xml</vdef>
       <dep/>
     </parameter>
 

@@ -57,7 +57,7 @@
       <types>
         <type>other</type>
       </types>
-      <vdef></vdef>
+      <vdef>delta_hedging_stats.xml</vdef>
       <dep/>
     </parameter>
 

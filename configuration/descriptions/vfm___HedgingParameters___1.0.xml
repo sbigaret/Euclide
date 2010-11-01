@@ -39,7 +39,7 @@
       <types>
         <type>other</type>
       </types>
-      <vdef></vdef>
+      <vdef>hedging_parameter.xml</vdef>
       <dep/>
     </parameter>
 

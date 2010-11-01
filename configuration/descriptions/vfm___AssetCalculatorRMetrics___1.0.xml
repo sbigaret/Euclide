@@ -57,7 +57,7 @@
       <types>
         <type>other</type>
       </types>
-      <vdef></vdef>
+      <vdef>asset_price_delta.xml</vdef>
       <dep/>
     </parameter>
 

@@ -21,7 +21,7 @@
       <types>
         <type>other</type>
       </types>
-      <vdef></vdef>
+      <vdef>simulation_paths.xml</vdef>
       <dep/>
     </parameter>
 
